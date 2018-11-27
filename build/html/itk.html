@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Инфо за дисциплината ИТК &mdash; KTT Info 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Инфо за катедра КТТ" href="ktt.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> KTT Info
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Съдържание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ktt.html">Инфо за катедра КТТ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Инфо за дисциплината ИТК</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-will-need">What you will need</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enter-the-code">Enter the code</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">KTT Info</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Инфо за дисциплината ИТК</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/itk.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Инфо за дисциплината ИТК<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-you-will-need">
+<h2>What you will need<a class="headerlink" href="#what-you-will-need" title="Permalink to this headline">¶</a></h2>
+<p>For this project we are going to leave
+the exact same circuit set up as in
+Project 1, but will use some different
+code to make the LED display a
+message in Morse Code. In this case,
+we are going to get the LED to signal
+the letters S.O.S., which is the
+international morse code distress signal.
+Morse Code is a type of character
+encoding that transmits letters and
+numbers using patterns of On and Off. It
+is therefore nicely suited to our digital
+system as we can turn an LED on and
+off in the necessary pattern to spell out
+a word or a series of characters. In this
+case we will be signaling S.O.S. which
+in the Morse Code alphabet is three dits
+(short flash), followed by three dahs
+(long flash), followed by three dits again.
+We can therefore now code our sketch
+to flash the LED on and off in this
+pattern, signaling SOS.</p>
+</div>
+<div class="section" id="enter-the-code">
+<h2>Enter the code<a class="headerlink" href="#enter-the-code" title="Permalink to this headline">¶</a></h2>
+<p>Create a new sketch and then type in
+the code listed above. Verify your code
+is error free and then upload it to your
+Arduino.</p>
+<p>Така изглежда нашата платка:</p>
+<a class="reference external image-reference" href="https://www.tugab.bg/index.php?lang=bg"><img alt="PCB" src="_images/pcb.png" /></a>
+<p>Така изглежда нашия код:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Project</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">Traffic</span> <span class="n">Lights</span>
+<span class="nb">int</span> <span class="n">ledDelay</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span> <span class="o">//</span> <span class="n">delay</span> <span class="ow">in</span> <span class="n">between</span> <span class="n">changes</span>
+<span class="nb">int</span> <span class="n">redPin</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="nb">int</span> <span class="n">yellowPin</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+<span class="nb">int</span> <span class="n">greenPin</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="n">void</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">yellowPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">void</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+</div>
+<table border="1" class="colwidths-given docutils align-right" id="id2">
+<caption><span class="caption-text">Тable with 3 columns, header-row and stub-column and right alignment</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="22%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">Stub Row 1</th>
+<td>Column 2, row 2</td>
+<td>Column 3, row 2</td>
+</tr>
+<tr class="row-odd"><th class="stub">Stub Row 2</th>
+<td>Column 2, row 3</td>
+<td>Column 3, row 3</td>
+</tr>
+<tr class="row-even"><th class="stub">Stub Row 3</th>
+<td>Column 2, row 4</td>
+<td>Column 3, row 4</td>
+</tr>
+</tbody>
+</table>
+<p>Пример за списък:</p>
+<ul>
+<li><p class="first"><strong>Дефиниция 1</strong></p>
+<p>Дефиниция 1 се отнася за горния текст.</p>
+</li>
+<li><p class="first">ред 2</p>
+<blockquote>
+<div><ul class="simple">
+<li>под ред 1</li>
+<li>под ред 2</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Важно</p>
+<div class="last admonition error">
+<p class="first admonition-title">Error</p>
+<p>Грешка</p>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Подсказка</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Предупреждение</p>
+</div>
+<div class="code last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">команди</span>
+ <span class="n">команди</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ktt.html" class="btn btn-neutral" title="Инфо за катедра КТТ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, KTT - K. Angelov.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
